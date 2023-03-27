@@ -59,10 +59,10 @@ export default {
 
     </div>
     <div class="main-banner">
-      <div class="container">
-        <nav>
-          <ul>
-            <li v-for="link in navLinksMain">
+      <div class="container h-100">
+        <nav class="h-100">
+          <ul class="d-flex h-100">
+            <li class="h-100 d-flex align-items-center p-2" v-for="link in navLinksMain">
               <img :src="getImagePath(link.src)" :alt="link.alt">
               <a href="#">{{ link.name }}</a>
             </li>
@@ -92,5 +92,9 @@ export default {
 .main-banner {
   height: 200px;
   background-color: $color-secondary;
+
+  & a {
+    color: $color-primary;
+  }
 }
 </style>
