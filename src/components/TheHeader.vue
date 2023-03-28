@@ -68,6 +68,14 @@ export default {
             </div>
         </div>
     </header>
+    <div class="jumbotron ">
+        <div class="container h-100 position-relative">
+            <div class="current-series position-absolute start-0">
+                <h5>CURRENT SERIES</h5>
+            </div>
+        </div>
+
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -107,5 +115,22 @@ ul {
     justify-content: space-between;
     align-items: center;
     height: 200px
+}
+
+.jumbotron {
+    height: 400px;
+    background-image: url(../assets/img/jumbotron.jpg);
+}
+
+.current-series {
+    height: 50px;
+    width: 180px;
+    background-color: $color-secondary;
+    bottom: -25px;
+
+    & h5 {
+        color: white;
+        padding: 10px 15px;
+    }
 }
 </style>

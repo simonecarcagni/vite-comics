@@ -145,7 +145,8 @@ export default {
 <template>
     <footer>
         <div class="footer-top">
-            <div class="container h-100 d-flex">
+
+            <div class="container h-100 d-flex position-relative">
 
                 <div class="col-1 h-100 mt-5">
                     <h5>DC COMICS</h5>
@@ -177,6 +178,7 @@ export default {
                         </li>
                     </ul>
                 </div>
+                <img class="dc-logo position-absolute end-0 top-0" src="../assets/img/dc-logo-bg.png" alt="Dc Logo">
             </div>
         </div>
         <div class="footer-bottom">
@@ -203,11 +205,18 @@ export default {
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins";
 
+
+.dc-logo {
+    height: 600px;
+    transform: translate(0px, -100px);
+}
+
 .footer-top {
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 400px;
+    overflow-y: hidden;
 
     & h5 {
         color: white;
