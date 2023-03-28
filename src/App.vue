@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     getImagePath: function (img) {
-      return new URL(`./assets/${img}`, import.meta.url).href;
+      return new URL(`./assets/img/${img}`, import.meta.url).href;
     }
   }
 }
@@ -61,12 +61,11 @@ export default {
     <div class="main-banner">
       <div class="container h-100">
         <nav class="h-100">
-          <ul class="d-flex h-100">
-            <li class="h-100 d-flex align-items-center p-2" v-for="link in navLinksMain">
+          <ul class="d-flex h-100 justify-content-around  ">
+            <li class="h-100 d-flex align-items-center p-2" v-for="(link, index) in navLinksMain" :key="index">
               <img :src="getImagePath(link.src)" :alt="link.alt">
-              <a href="#">{{ link.name }}</a>
+              <a class="px-2" href="#">{{ link.name }}</a>
             </li>
-
           </ul>
         </nav>
       </div>
@@ -95,6 +94,19 @@ export default {
 
   & a {
     color: $color-primary;
+  }
+
+  & img {
+    height: 60px;
+  }
+
+}
+
+
+li {
+
+  &:last-child img {
+    height: 40px;
   }
 }
 </style>

@@ -150,13 +150,13 @@ export default {
                 <div class="col-1 h-100 mt-5">
                     <h5>DC COMICS</h5>
                     <ul>
-                        <li v-for="link in linksDcComic">
+                        <li v-for="(link, index) in linksDcComic" :key="index">
                             <a :href="link.href">{{ link.name }}</a>
                         </li>
                     </ul>
                     <h5>SHOP</h5>
                     <ul>
-                        <li v-for="link in linksShop">
+                        <li v-for="(link, index) in linksShop" :key="index">
                             <a :href="link.href">{{ link.name }}</a>
                         </li>
                     </ul>
@@ -164,15 +164,15 @@ export default {
                 <div class="col-1 h-100 mt-5">
                     <h5>DC</h5>
                     <ul>
-                        <li v-for="link in linksDc">
+                        <li v-for="(link, index) in linksDc" :key="index">
                             <a href="">{{ link.name }}</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-1 h-100 mt-5">
+                <div class=" col-1 h-100 mt-5">
                     <h5>SITES</h5>
                     <ul>
-                        <li v-for="link in linksSite">
+                        <li v-for="(link, index) in linksSite" :key="index">
                             <a href="">{{ link.name }}</a>
                         </li>
                     </ul>

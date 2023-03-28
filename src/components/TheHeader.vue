@@ -61,7 +61,7 @@ export default {
             </div>
             <div class="h-100 my-5">
                 <ul class="h-100">
-                    <li class="h-100" v-for="link in navLinks">
+                    <li class="h-100" v-for="(link, index) in navLinks" :key="index">
                         <a :href="link.href">{{ link.name }}</a>
                     </li>
                 </ul>
